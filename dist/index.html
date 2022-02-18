@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieSpot</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">    
+    <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/507fe3097a.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/queries.css">
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-firestore.js"></script>
+
+<script defer src="js/bundle.js"></script></head>
+<body>
+         <!-- Loader -->
+        <div class="loader--wrapper">
+            <div class="loader">
+              <div class="inner one"></div>
+              <div class="inner two"></div>
+              <div class="inner three"></div>
+            </div>
+          </div>
+
+    <div class="wrapper">       
+            <section class="header">
+                <div class="title">
+                    <p class="title__text">MovieSpot</p>
+                </div>
+                <div class="main-nav">
+                    <ul class="nav">
+                        
+                        <li class="nav__items"><a href="#" class="nav__items--links nav__items--movies">Movies</a>
+                            <div class="movies__submenu">
+                                <ul>                                
+                                    <li><a href="./navbar_movie.html?m_title=popular&m_type=movie" target="blank">Popular</a></li>
+                                    <li><a href="./navbar_movie.html?m_title=now_playing&m_type=movie" target="blank">Now Playing</a></li>
+                                    <li><a href="./navbar_movie.html?m_title=upcoming&m_type=movie" target="blank">Upcoming</a></li>
+                                    <li><a href="./navbar_movie.html?m_title=top_rated&m_type=movie" target="blank">Top Rated</a></li>      
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav__items"><a href="#" class="nav__items--links">TV Shows</a>
+                            <div class="tv__submenu">
+                                <ul>
+                                    <li><a href="./navbar_tv.html?tv_title=popular&tv_type=tv" target="blank">Popular</a></li>
+                                    <li><a href="./navbar_tv.html?tv_title=airing_today&tv_type=tv" target="blank">Airing Today</a></li>
+                                    <li><a href="./navbar_tv.html?tv_title=top_rated&tv_type=tv" target="blank">Top Rated</a></li>
+                                    <li><a href="./navbar_tv.html?tv_title=on_the_air&tv_type=tv" target="blank">On TV</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav__items"><a href="#" class="nav__items--links">People</a>
+                            <div class="people__submenu">
+                                <ul>
+                                    <li><a href="./popular_person.html" target="blank">Popular People</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav__items"><a href="./#contact-us" class="nav__items--links">Contact Us</a></li>
+                    </ul>  
+                </div>
+            </section>
+            <!-- Image Preloading -->
+        <img src="../img/img_11.jpg" style="display:none;" alt="" />
+        <img src="../img/img_19.jpg" style="display:none;" alt="" />
+        <img src="../mg/img_2.jpg" style="display:none;" alt="" />
+        <img src="../img/img_3.jpg" style="display:none;" alt="" />
+        <img src="../img/img_4.jpg" style="display:none;" alt="" />
+        <img src="../img/img_5.jpg" style="display:none;" alt="" />
+        <img src="../img/img_6.jpg" style="display:none;" alt="" />
+        <img src="../img/img_7.jpg" style="display:none;" alt="" />
+        <img src="../img/img_8.jpg" style="display:none;" alt="" />
+        <img src="../img/img_9.jpg" style="display:none;" alt="" />
+        
+        <div class="banner">
+                <div class="banner__cover">
+                    <div class="banner__cover--welcome-note">
+                        <p class="welcome__text">Welcome</p>
+                        <div class="welcome__note">
+                            Millions of Movies, TV Shows and People to discover. Explore Now!
+                        </div>
+                    </div>
+                    <div class="banner__cover--search">
+                        <form class="search__form">
+                            <input type="text" name="search-texbox" class="search__form--textbox" placeholder="Search for movies, tv shows and persons">
+                            <input type="submit" class="search__form--button" name="search-button" value="Search">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- What's Popular -->
+        
+        <div class="content-wrapper">
+            <div class="content-header">
+                <p class="content-header__heading">What's Popular</p>
+                <div class="content-header__navbar">
+                    <ul class="navbar">
+                        <li class="navbar-items active"><a class="navbar-links popular-link">Popular</a></li>                    
+                        <li class="navbar-items"><a class="navbar-links upcoming-link">Upcoming</a></li>
+                        <li class="navbar-items"><a class="navbar-links toprated-link">Top Rated</a></li>
+                        <li class="navbar-items"><a class="navbar-links intheatres-link">In Theatres</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content-scroller">
+                <div class="movie-wrapper">
+
+            <!-- Content Card Template  -->
+                    <!-- <div class="movie-container">
+                        <img src="https://image.tmdb.org/t/p/w185/ulzhLuWrPK07P1YkdWQLZnQh1JL.jpg" alt="" class="movie-image">
+                        <div class="movie-rating__container">
+                            <div class="movie-rating">
+                                <div class="movie-rating__inner-round">
+                                    <p class="rating-percent">86%</p>
+                                </div>
+                        </div>
+                        </div>
+                        <h2 class="movie-title">Avengers Endgame</h2>
+                        <p class="movie-releasedate">May 2,2019</p>
+                    </div>                        -->
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="trending-wrapper">
+            <div class="trending-header">
+                <p class="trending-header__heading">Trending</p>
+                <div class="trending-header__navbar">
+                    <ul class="navbar">
+                        <li class="navbar-items active"><a class="navbar-links trending__today">Today</a></li> 
+                        <li class="navbar-items"><a class="navbar-links trending__week">This Week</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Trending Scroller -->
+            <div class="trending-scroller">
+                <div class="trending__movie-wrapper">
+                    
+                    <!-- <div class="movie-container">
+                        <img src="https://image.tmdb.org/t/p/w185/ulzhLuWrPK07P1YkdWQLZnQh1JL.jpg" alt="" class="movie-image">
+                        <div class="movie-rating__container">
+                            <div class="movie-rating">
+                                <div class="movie-rating__inner-round">
+                                    <p class="rating-percent">86%</p>
+                                </div>
+                        </div>
+                        </div>
+                        <h2 class="movie-title">Avengers Endgame</h2>
+                        <p class="movie-releasedate">May 2,2019</p>
+                    </div> -->                    
+                    
+                </div>            
+            </div>
+        </div>
+
+        <!-- Trailer Section-->
+
+        <div class="trailer-wrapper">
+            <div class="trailer-title">
+                <p class="trailer-title__heading">Latest Trailers</p>
+            </div>
+            <div class="trailer-card__wrapper">
+                <!-- <div class="trailer-card">
+                    <div class="trailer__image--wrapper">
+                        <a class="image play-trailer" data-title="The Naked Director Scam2" href="https://www.youtube.com/watch?v=TcMBFSGVi1c" target="_blank">
+                            <img src="https://image.tmdb.org/t/p/w300/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg" alt="" class="play-trailer__image">
+                            <div class="play">
+                                <svg class="play-trailer__icon">
+                                    <use xlink:href="../img/sprite.svg#play"></use>
+                                </svg>  
+                            </div>
+                        </a>
+                    </div>
+                    <div class="trailer__content">
+                        <h2>
+                            <a href="#" title="avengers end game" class="trailer__name"> Avengers Endgame</a>
+                        </h2>                                                          
+                        <h3 class="trailer__details">Avengers Endgame | Official Trailer | Netflix</h3>
+                    </div>
+                </div> -->
+                
+            </div>           
+        </div>
+
+        <!-- Latest TV shows Section -->
+
+        <div class="latest-wrapper">
+            <div class="latest-header">
+                <p class="latest-header__heading">Latest TV Shows</p>
+                <div class="latest-header__navbar">
+                    <ul class="navbar">
+                        <li class="navbar-items active"><a class="navbar-links tvshows_today">Today</a></li> 
+                        <li class="navbar-items"><a class="navbar-links tvshows_week">This Week</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="latest-scroller">
+                <div class="latest__movie-wrapper">
+<!-- 
+                     <div class="movie-container">
+                        <img src="https://image.tmdb.org/t/p/w185/ulzhLuWrPK07P1YkdWQLZnQh1JL.jpg" alt="" class="movie-image">
+                        <div class="movie-rating__container">
+                            <div class="movie-rating">
+                                <div class="movie-rating__inner-round">
+                                    <p class="rating-percent">86%</p>
+                                </div>
+                        </div>
+                        </div>
+                        <h2 class="movie-title">Avengers Endgame</h2>
+                        <p class="movie-releasedate">May 2,2019</p>
+                    </div>                      -->                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact us Section -->
+        <form id="feedback__form">
+            <div class="contact-us__wrapper" id="contact-us">
+                <div class="feedback">
+                    <p class="feedback-title">Give us a feedback</p>
+                    <input type="text" name="name" class="u-name" placeholder="Your name" required>
+                    <input type="text" name="email" class="u-email" placeholder="Your Email" required>
+                    <textarea name="msg" class="u-msg" cols="25" rows="3" placeholder="Your Feedback here" required></textarea>
+                    <input type="submit" name="submit" value="SUBMIT" class="send-btn">
+                </div>
+                <div class="social">
+                    <div class="owner__wrapper">
+                        <p class="social__title">Movie Spot</p>
+                        <p class="social__owner">Design & build by Sarath</p>
+                        <div class="social__icons">
+                            <a href="https://www.instagram.com/sarath_marvin" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=100006944086931" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/SarathMarvin" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="https://github.com/sarath-marvin-7" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="attribution">
+                        <p class="powered-by">Powered by</p>                    
+                        <a href="https://www.themoviedb.org/" target="_blank"><img src="img/tmdb_logo1.svg" alt="TMDB Logo" class="attr-img"></a>
+                    </div>                
+                </div>       
+            </div>         
+        </form>
+    <script>
+                // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAZfx7zY7B09qn2ObdIlFCqCpql9pchiXE",
+            authDomain: "moviespot-67611.firebaseapp.com",
+            projectId: "moviespot-67611",
+            storageBucket: "moviespot-67611.appspot.com",
+            messagingSenderId: "431950898164",
+            appId: "1:431950898164:web:a24eefdd14356551d5cfa1"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        // Creating firestore
+        const db = firebase.firestore();
+        db.settings({timestampsInSnapshots : true})
+    </script>
+</body>
+</html> 

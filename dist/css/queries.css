@@ -1,0 +1,426 @@
+/*  Big tablet to 1200px (widths smaller than the 1140px row) */
+@media only screen and (max-width : 1200px){
+    
+}
+
+/*  Small tablet to big tablet : from 768px to 1023px */
+@media only screen and (max-width: 1023px){
+    html{font-size: 52.5%;}
+
+    .movie-info__img{
+        height: 45rem;
+    }
+
+    .cast-card__wrapper{
+        width: 12rem;
+    }
+
+    .cast__image{
+        width: 12rem;
+    }
+
+    .media-content__videos{
+        margin-right: 1rem;
+        width :45rem;
+        height : 25.5rem;
+      }
+
+      .backdrop-image{width: 400px;}
+      
+      .poster-image{ height : 25.5rem; }
+
+      .rcmd-content__card{
+          width: 30rem;
+      }
+
+      .rcmd-content-image{
+        width: 30rem;
+      }
+
+      .search__card--image-container{
+        height: 15rem;            
+      }
+
+      .search__card--image{
+        height: 15rem;
+        width: 10rem;          
+      }
+
+      .nav__movie--title{
+          margin-left: 5rem;
+      }
+
+      .nav__movie--content{
+          width: 700px;
+      }
+
+      .nav__tv--title{
+        margin-left: 5rem;
+      }
+
+      .nav__tv--content{
+        width: 700px;
+      }
+
+      .person__content--card{
+        width: 17rem;
+      }
+
+      .person__content--image{
+        width: 17rem;
+        height: 26rem;   
+       }
+
+       .external_id--title{
+           margin-left: 1rem;
+       }
+
+       .external_id--links{
+        margin-left: 1rem;
+        margin-top: 1rem;
+      }
+
+      
+      .people__place-of-birth{
+          width: 35rem;
+      }
+
+      .details__name{
+        margin-top: 6rem;
+      }
+           
+}
+
+/* Small phones to small tablets: from 481px to 767px */
+@media only screen and (max-width : 767px){
+    html{
+      font-size: 42.5%;
+    }
+
+    /* .main-nav{
+        /*  display: none; 
+      } */
+
+    .search__form--textbox::placeholder{
+      font-size: 1.6rem;
+    }
+
+    .play-trailer__image{
+      width: 40rem;
+    }
+    
+    .trailer__name{
+      font-size: 2.2rem;
+    }
+
+    .trailer__details{
+      font-size: 2.2rem;
+    }
+    
+    .movie-info__container{
+      flex-direction: column;
+    }
+
+    .movie-info__details{
+      margin-top: 3rem;
+      margin-right: 3rem;
+    }
+
+    .movie-info__poster{
+      margin-bottom: 0;
+    }
+
+    .movie-info__genre{
+      font-size: 1.8rem;
+      margin-top: 1.5rem;
+    }
+
+    .overview-title{
+      font-size: 3.2rem;
+    }
+
+    .overview-content,.crew-member__name{
+      font-size: 1.8rem;
+    }
+
+    .crew-member__dept{
+      font-size: 1.6rem;
+    }
+
+    .movie-info__user-score{
+      margin-top: 0;
+    }
+
+    .movie-info__overview{
+      margin-top: 0;
+    }
+
+    .media-content__videos{
+      margin-right: 1rem;
+      width :35rem;
+      height : 20.5rem;
+    }
+
+    .backdrop-image{width: 35rem;}
+    
+    .poster-image{ height : 20.5rem; }
+
+    .rcmd-content__card{
+      width: 26rem;
+  }
+
+    .rcmd-content-image{
+      width: 26rem;
+    }
+
+    .cast-crew__title,
+    .cast-crew__release-year{
+      font-size: 3.5rem;
+    }
+    .people-info__content{
+      flex-direction: column;
+    }
+
+    .people-info__img{
+      margin-bottom: 0;
+    }
+
+    .details__name{
+      margin-top: 3rem;
+    }
+
+    .people__place-of-birth{
+      width: auto;
+    }
+
+    .personal-info__wrapper{
+      flex-direction: column;
+    }
+
+    .people__gender,.people__birth-date,.people__place-of-birth,.people__also-known-as,.external_id--title{
+      margin-left: 0;
+    }
+
+    .people__gender,.people__birth-date,.people__place-of-birth,.people__also-known-as,.external_id--title{
+      margin-top: 2rem;
+    }
+
+    .known__for-title,.gender-title,.birthday-title,.place_of_birth-title,.also_known_as-title,.external_id--title{
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    .known__for,.gender,.birthday,.place_of_birth,.also_known_as{
+      font-size: 2rem;
+      margin-top: 1rem;
+    }
+
+    .details__overview--title{
+      font-size: 3rem;
+    }
+
+    .details__overview{
+      font-size: 2.2rem;
+    }
+
+    .personal-info__title{
+      font-size: 3.2rem;
+    }
+
+    .fab{
+      font-size: 2.6rem;
+    }
+
+    .external_id--links{
+      margin-left: 0;
+    }
+
+    /* Nav movie */
+
+    .nav__movie--content,
+    .nav__tv--content{
+      width: 420px;
+    }
+
+    .nav__movie--title,
+    .nav__tv--title{
+      margin-left: 8rem;
+    }
+}
+
+/* Small phones from 0px to 480px */
+@media only screen and (max-width : 480px){
+  html{
+    font-size: 36.5%;
+  }
+  /* .main-nav{
+      /* display: none;  
+  } */
+
+  .welcome__note{
+    margin-right: 1rem;
+    font-size: 2.4rem;
+  }
+  .search__form--textbox{
+    width: 55%;
+    margin-right: 2rem;
+  }
+
+  .search__form--textbox::placeholder{
+    font-size: 1.4rem;
+  }
+
+  /* Nav bars */
+
+  .content-header__navbar{
+    display: none;
+  }
+
+  .movie-title{
+    margin-top: 3rem;
+  }
+
+  .movie-rating__inner-round{
+    border: 2px solid rgb(60, 224, 137);
+  }
+
+  .title__text{
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+  }
+  .banner{
+    margin-top: -1rem;
+  }
+
+  .contact-us__wrapper{
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .social{
+    margin-left: 3rem;
+  }
+
+  .social__owner{
+    font-size: 2.4rem;    
+  }
+
+  .send-btn,.u-name,.u-email{ 
+    height: 4rem;
+    width: 40rem;
+  }
+  .u-msg{ width: 40rem;}
+  
+  .feedback-title{
+     align-self: flex-start;
+     margin-left: .5rem;
+  }
+  
+  .attribution{
+    margin-top: 2rem;
+    margin-left: -2rem;
+  }
+
+  .powered-by{
+    font-size: 2.2rem;
+  }
+
+  /* Movie info page */
+
+  .rating-user-score{
+    margin-left: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  .movie-info__rating__inner-round{
+    border: 2px solid rgb(60, 224, 137);
+  }
+
+  .user-score__play-trailer{
+    margin-left: 0;
+    margin-top: .8rem;
+  }
+
+  .user-score__play-trailer-text{
+    font-size: 2rem;
+  }
+
+  .movie-info__img{
+    height: 35rem;
+  }
+
+  .movie-info__title,.movie-info__year{
+    font-size: 3rem;
+  }
+
+  .rcmd-content__movie-title,.rcmd-content__movie-rating{
+    font-size: 1.8rem;
+  }
+
+  .cast-crew__title,
+  .cast-crew__release-year{
+    font-size: 2.4rem;
+  }
+
+  .nav__movie--content,
+    .nav__tv--content{
+      width: 240px;
+    }
+
+    .movie__content--card{
+      width: 16rem;
+    }
+
+    .nav__movie-image{
+      height: 23rem;
+      width: 16rem;
+    }
+
+
+    .nav__movie--title,
+    .nav__tv--title{
+      margin-left: 8rem;
+    }
+
+    .nav__movie-rating__inner-round,.nav__tv-rating__inner-round{
+      border: 2px solid rgb(60, 224, 137);
+    }
+
+    .search__container{
+      flex-direction: column;
+    }
+
+    .search__card--image-container{
+      border: 1px solid red;             
+      height: 100%;
+    }
+
+    .search__card--image{
+      height: 100%;
+    }
+
+    .search__content{
+      margin: 0 auto;
+    }
+
+    .search__content--card{
+      width: 100%;
+      position: relative;
+    }
+
+    
+    .search__nav{
+      width: 24rem;
+    }
+
+    .search__nav--wrapper{
+      margin-left: 2rem;
+    }
+
+    
+
+    
+
+    
+  
+}

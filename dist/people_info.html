@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People Info</title>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/queries.css">
+    <script src="https://kit.fontawesome.com/507fe3097a.js" crossorigin="anonymous"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-firestore.js"></script>
+<script defer src="js/bundle.js"></script></head>
+<body>
+    <!-- Loader -->
+    <div class="loader--wrapper">
+        <div class="loader">
+          <div class="inner one"></div>
+          <div class="inner two"></div>
+          <div class="inner three"></div>
+        </div>
+      </div>
+      
+    <div class="people-info__wrapper">
+        <!-- <section class="people-info__content">
+            <div class="people-info__poster">
+                <img src="https://image.tmdb.org/t/p/w500/mclHxMm8aPlCPKptP67257F5GPo.jpg" alt="Cannot load Image" class="people-info__img">
+            </div>
+            <div class="people-info__details">
+                <p class="details__name">Tom Hiddleston</p>
+                <p class="details__overview--title">Biography</p>
+                <p class="details__overview">Thomas William Hiddleston (born 9 February 1981) is an English actor. He is the recipient of several accolades, including a Golden Globe Award and a Laurence Olivier Award, and has been nominated for two Primetime Emmy Awards. At the beginning of his career, he appeared in West End productions of Cymbeline (2007) and Ivanov (2008). He won the Olivier Award for Best Newcomer in a Play for his role in Cymbeline and was also nominated for the same award for his role as Cassio in Othello (2008). He starred as the title character in a production of Coriolanus (2013-2014), winning the Evening Standard Theatre Award for Best Actor and receiving a nomination for the Olivier Award for Best Actor. He made his Broadway debut in a 2019 revival of Betrayal.\n\nHiddleston made his film debut in the drama Unrelated (2007). He came to wider public attention when cast as Loki in the Marvel Cinematic Universe, appearing in Thor (2011), The Avengers (2012), Thor: The Dark World (2013), Thor: Ragnarok (2017), Avengers: Infinity War (2018), and Avengers: Endgame (2019). He has also appeared in War Horse (2011), The Deep Blue Sea (2011), Midnight in Paris (2011), the 2012 BBC series Henry IV and Henry V, and Only Lovers Left Alive (2013). In 2015, he starred in Crimson Peak, High Rise, and I Saw The Light. The film Kong: Skull Island (2017) marked his first big-budget leading role outside MCU.\n\nHe starred in and was an executive producer of the AMC / BBC limited series The Night Manager (2016), for which he received two Primetime Emmy Award nominations for Outstanding Lead Actor in a Limited Series or Movie and Outstanding Limited Series, and won his first Golden Globe Award for Best Actor – Miniseries or Television Film.\n\nDescription above is from the Wikipedia article Tom Hiddleston, licensed under CC-BY-SA, full list of contributors on Wikipedia.</p>
+            </div>
+        </section>
+        <section class="people__personal-info">
+            <p class="personal-info__title">Personal Info</p>
+            <div class="personal-info__wrapper">
+                <div class="people__known_for">
+                    <p class="known__for-title">Known For</p>
+                    <p class="known__for">Acting</p>
+                </div>
+                <div class="people__gender">
+                    <p class="gender-title">Gender</p>
+                    <p class="gender">Male</p>
+                </div>
+                <div class="people__birth-date">
+                    <p class="birthday-title">Birthday</p>
+                    <p class="birthday">1981-02-09(40 years old)</p>
+                </div>    
+                <div class="people__place-of-birth">
+                    <p class="place_of_birth-title">Place of Birth</p>
+                    <p class="place_of_birth">Westminster, London, England, UK</p>
+                </div>
+                <div class="external_id">
+                    <p class="external_id--title">External IDs</p>
+                    
+                    <div class="external_id--links">
+                            <a href="https://www.instagram.com/sarath_marvin" target="_blank" class="social-icon"><i class="fab fa-instagram external"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=100006944086931" target="_blank" class="social-icon"><i class="fab fa-facebook-f external"></i></a>
+                            <a href="https://twitter.com/SarathMarvin" target="_blank" class="social-icon"><i class="fab fa-twitter external"></i></a>
+                            <a href="https://github.com/sarath-marvin-7" target="_blank" class="social-icon"><i class="fab fa-github external"></i></a>
+                    </div>
+                </div>
+            </div>            
+        </section> -->
+        </div>    
+        
+    <!-- Contact us Section -->
+    <form id="feedback__form">
+        <div class="contact-us__section">
+            <div class="contact-us__wrapper">
+                <div class="feedback">
+                    <p class="feedback-title">Give us a feedback</p>
+                    <input type="text" name="name" class="u-name" placeholder="Your name" required>
+                    <input type="text" name="email" class="u-email" placeholder="Your Email" required>
+                    <textarea name="msg" class="u-msg" cols="25" rows="3" placeholder="Your Feedback here" required></textarea>
+                    <input type="submit" name="submit" value="SUBMIT" class="send-btn">
+                </div>
+                <div class="social">
+                    <div class="owner__wrapper">
+                        <p class="social__title">Movie Spot</p>
+                        <p class="social__owner">Design & build by Sarath</p>
+                        <div class="social__icons">
+                            <a href="https://www.instagram.com/sarath_marvin" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=100006944086931" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/SarathMarvin" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="https://github.com/sarath-marvin-7" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="attribution">
+                        <p class="powered-by">Powered by</p>                    
+                        <a href="https://www.themoviedb.org/" target="_blank"><img src="img/tmdb_logo1.svg" alt="TMDB Logo" class="attr-img"></a>
+                    </div>                
+                </div>       
+            </div>
+        </div>
+    </form>    
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAZfx7zY7B09qn2ObdIlFCqCpql9pchiXE",
+            authDomain: "moviespot-67611.firebaseapp.com",
+            projectId: "moviespot-67611",
+            storageBucket: "moviespot-67611.appspot.com",
+            messagingSenderId: "431950898164",
+            appId: "1:431950898164:web:a24eefdd14356551d5cfa1"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        // Creating firestore
+        const db = firebase.firestore();
+        db.settings({timestampsInSnapshots : true})
+        </script>
+</body>
+</html>

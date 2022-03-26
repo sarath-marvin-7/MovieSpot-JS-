@@ -11,10 +11,10 @@
   "author": "Sarath Kumar",
   "license": "ISC",
   "devDependencies": {
-    "html-webpack-plugin": "^5.3.1",
-    "webpack": "^5.27.0",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.2"
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
     "axios": "^0.21.1",

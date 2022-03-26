@@ -56,5 +56,22 @@
             </div>
         </div>
     </div>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyCmcWrgCDMiuount443kkzowqhENXtLFMQ",
+            authDomain: "movie-spot-78320.firebaseapp.com",
+            projectId: "movie-spot-78320",
+            storageBucket: "movie-spot-78320.appspot.com",
+            messagingSenderId: "637727041813",
+            appId: "1:637727041813:web:2efde1052772f84311211c",
+            measurementId: "G-G1WT2HW7MW"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        // Creating firestore
+        const db = firebase.firestore();
+        db.settings({timestampsInSnapshots : true})
+    </script>
 </body>
 </html>

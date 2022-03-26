@@ -640,8 +640,31 @@ if(document.querySelector('#feedback__form')){
                 swal("Thank you!", "Your response has been submitted!", "success");
             })
         }
+        // swal("Thank you!", "Your response has been submitted!", "success");
         document.querySelector('.u-name').value = '';
         document.querySelector('.u-email').value = '';
         document.querySelector('.u-msg').value = '';
     });
 }
+let navOpen = true;
+document.querySelector('.menu-btn').addEventListener('click', () =>{
+    if(navOpen){
+        document.querySelector('.nav').style.left = '0%';
+        navOpen = false;
+        document.querySelector('.menu-btn').classList.add('open');
+    } else {
+        document.querySelector('.nav').style.left = '-100%';
+        navOpen = true;
+        document.querySelector('.menu-btn').classList.remove('open');
+    }
+});
+
+document.querySelector(".contact__us--link").addEventListener('click', () =>{
+    if(navOpen){
+        document.querySelector('.nav').style.left = '0%';
+        navOpen = false;
+    } else {
+        document.querySelector('.nav').style.left = '-100%';
+        navOpen = true;
+    }
+});

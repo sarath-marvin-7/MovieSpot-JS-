@@ -325,6 +325,27 @@
     font-size: 2.2rem;
   }
 
+  .feedback{
+    align-self: center;
+    margin-left: 2rem;
+  }
+
+  .social{
+    margin-bottom: 10px;
+    align-self: center;
+    margin-right: 8rem;
+  }
+
+  .u-name, .u-email, .u-msg {
+    height: 3rem;
+    width: 36rem;
+  }
+
+  .send-btn{
+    width: 36rem;
+  }
+
+
   /* Movie info page */
 
   .rating-user-score{
@@ -391,12 +412,11 @@
     }
 
     .search__card--image-container{
-      border: 1px solid red;             
-      height: 100%;
+      height: 19.5rem; 
     }
 
     .search__card--image{
-      height: 100%;
+      height: 19.5rem;
     }
 
     .search__content{
@@ -407,7 +427,6 @@
       width: 100%;
       position: relative;
     }
-
     
     .search__nav{
       width: 24rem;
@@ -417,10 +436,120 @@
       margin-left: 2rem;
     }
 
+    /* Top Nav Bar*/
     
+    .nav{
+      position: fixed;
+      top: 8rem;
+      left: -100%;
+      background: var(--color-primary) ;
+      height: 100vh;
+      width: 100%;
+      z-index: 100;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
 
-    
+    .nav__items{
+      display: block;
+      margin: 4rem 0;
+    }
 
+    .nav__items--links:link,
+    .nav__items--links:visited{
+      font-size: 2.4rem;
+    }
+
+    .nav__items--links:hover,
+    .nav__items--links:active{
+      color: rgb(0, 206, 161);
+    }
+
+    .header{
+      position: relative;
+    }
+    .menu-btn{
+      display: block;
+      position: absolute;
+      right: 0;
+      margin-right: 20px;
+    } 
     
+    
+    
+    .menu-btn .menu-btn__burger{
+      width: 27px;
+      height: 4px;
+      background: #fff;
+      border-radius: 5px;
+      box-shadow:0 2px 5px rgba(255,101, 47, .2) ;
+      transition: all .5s ease-in-out;
+    }
+    
+    .menu-btn__burger::before,
+    .menu-btn__burger::after{
+      content: '';
+      position: absolute;
+      width: 27px;
+      height: 4px;
+      background: #fff;
+      border-radius:5px;
+      box-shadow: 0 2px 5px rgba(255,101, 47, .2);
+      transition: all .5s ease-in-out;
+    }
+    
+    .menu-btn__burger::before{
+      transform: translateY(-9px);
+    }
+    
+    .menu-btn__burger::after{
+      transform: translateY(9px);
+    }
+    
+    /* ANIMATION */
+      .menu-btn.open .menu-btn__burger{
+        transform: translateX(50px);
+        background: transparent;
+        box-shadow: none;
+      }
+    
+      .menu-btn.open .menu-btn__burger::before{
+        transform: rotate(45deg) translate(-35px, 35px);
+      }
+    
+      .menu-btn.open .menu-btn__burger::after{
+        transform: rotate(-45deg) translate(-35px, -35px);
+      }
+
+    /* Movies Submenu */
+    .nav__items:hover .movies__submenu{
+      background-color: #fff;
+      margin-left: 50%;
+    }
+    
+    .nav__items:hover .movies__submenu ul li a{
+      color: var(--color-primary);
+    }
+
+    /* TV Submenu */
+    .nav__items:hover .tv__submenu{
+      background-color: #fff;
+      margin-left: 50%;
+    } 
+    
+    .nav__items:hover .tv__submenu ul li a{
+      color:  var(--color-primary);
+    }
+
+    /* People submenu */
+    .nav__items:hover .people__submenu{
+      background-color: #fff;
+      margin-left: 50%;
+    }
+    
+    
+    .nav__items:hover .people__submenu ul li a{
+      color: var(--color-primary);
+    }
   
 }
